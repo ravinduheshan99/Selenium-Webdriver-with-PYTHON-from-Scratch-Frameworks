@@ -1,5 +1,5 @@
 """
-File: 01_python_basics.py
+python_basics.py
 
 Purpose:
 This file covers the basic Python concepts that are useful before moving into

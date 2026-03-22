@@ -1,5 +1,5 @@
 """
-File: 03_python_functions.py
+python_functions.py
 
 Purpose:
 This file covers the basics of functions in Python, which are essential for
