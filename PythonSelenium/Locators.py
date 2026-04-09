@@ -3,6 +3,7 @@ import os
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.ie.service import Service
+from selenium.webdriver.support.select import Select
 
 current_dir = os.path.dirname(__file__)
 dirver_path = os.path.join(current_dir,"..","resources","chromedriver-win64","chromedriver.exe")
@@ -20,6 +21,12 @@ driver.find_element(By.NAME,"email").send_keys("contact@rahulshetty.com")
 driver.find_element(By.ID,"exampleInputPassword1").send_keys("Rs@12345")
 driver.find_element(By.ID,"exampleCheck1").click()
 
+# Static Dropdown
+staticDropdown = Select(driver.find_element(By.ID,"exampleFormControlSelect1"))
+staticDropdown.select_by_index(1)
+staticDropdown.select_by_visible_text("Male")
+
+# Select Radio Button
 driver.find_element(By.CSS_SELECTOR,"#inlineRadio1")
 
 # To create Xpath -> //tagname[@attribute='value of the attribute']
