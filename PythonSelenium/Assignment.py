@@ -5,7 +5,10 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.support import expected_conditions
 from selenium.webdriver.support.wait import WebDriverWait
-#['Cucumber - 1 Kg', 'Raspberry - 1/4 Kg', 'Strawberry - 1/4 Kg']
+
+
+expectedList = ['Cucumber - 1 Kg', 'Raspberry - 1/4 Kg', 'Strawberry - 1/4 Kg']
+actualList = []
 
 current_dir = os.path.dirname(__file__)
 dirver_path = os.path.join(current_dir,"..","resources","chromedriver-win64","chromedriver.exe")
@@ -24,7 +27,11 @@ filteredProductsCount = len(filteredProductList)
 assert filteredProductsCount > 0
 
 for product in filteredProductList:
+    #Assignment task 01
+    actualList.append(product.find_element(By.XPATH,"h4").text)
     product.find_element(By.XPATH,"div/button").click()
+
+assert expectedList == actualList
 
 driver.find_element(By.CSS_SELECTOR,"img[alt='Cart']").click()
 driver.find_element(By.XPATH,"//button[text()='PROCEED TO CHECKOUT']").click()
@@ -48,3 +55,7 @@ wait.until(expected_conditions.visibility_of_element_located((By.CLASS_NAME,"pro
 
 promoCodeSuccessText = driver.find_element(By.CLASS_NAME,"promoInfo").text
 assert promoCodeSuccessText == "Code applied ..!"
+
+#Assignment task 02
+totalAfterDiscount = driver.find_element(By.CLASS_NAME,"discountAmt").text
+assert float(totalAfterDiscount) < int(actualSum)
