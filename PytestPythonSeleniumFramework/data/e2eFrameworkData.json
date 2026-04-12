@@ -1,0 +1,20 @@
+{
+  "data": [
+    {
+      "userName": "rahulshettyacademy",
+      "userPassword": "Learning@830$3mK2",
+      "productName": "Blackberry",
+      "partialCountryName": "ind",
+      "fullCountryName": "India",
+      "actualTextToAssert": "Success! Thank you!"
+    },
+    {
+      "userName": "rahulshettyacademy",
+      "userPassword": "Learning@830$3mK2",
+      "productName": "iphone X",
+      "partialCountryName": "ind",
+      "fullCountryName": "India",
+      "actualTextToAssert": "Success! Thank you!"
+    }
+  ]
+}

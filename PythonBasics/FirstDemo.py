@@ -10,7 +10,7 @@ Topics covered:
 2. Variables
 3. Multiple variable assignment
 4. String formatting
-5. Data types
+5. data types
 6. Lists
 7. Tuples
 8. Dictionaries

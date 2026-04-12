@@ -17,7 +17,7 @@ import pytest
 
 #fixtures are used as setup and teardown methods for test cases - conftest file to generalize fixtures
 #fixtures and make it available to all test cases (fixture name into parameter of method)
-#Data driven and parameterization can be done with return statements in tuple format
+#data driven and parameterization can be done with return statements in tuple format
 #When you define fixtures to class only, it will run once before class is initiated at the end
 
 #pip install pytest-html

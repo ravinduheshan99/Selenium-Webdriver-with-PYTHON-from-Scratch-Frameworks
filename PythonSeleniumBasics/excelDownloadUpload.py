@@ -52,7 +52,7 @@ wait = WebDriverWait(driver, 15)
 toast_locator = (By.CSS_SELECTOR, ".Toastify__toast-body")
 toast = wait.until(EC.visibility_of_element_located(toast_locator))
 toastText = toast.text
-assert toastText == "Updated Excel Data Successfully."
+assert toastText == "Updated Excel data Successfully."
 print("Toast text is: ",toastText)
 
 price_column = driver.find_element(By.XPATH,"//div[text()='Price']").get_attribute("data-column-id")

@@ -1,8 +1,6 @@
 import pytest
-import os
 from selenium import webdriver
 from selenium.webdriver.ie.service import Service
-
 # command to pass execution browser ---> pytest test_e2eTestFramework.py --browser_name firefox
 
 
@@ -23,11 +21,13 @@ def browserInstance(request):
     service_obj = Service()
     if browser_name == "chrome":
         driver = webdriver.Chrome(service=service_obj)
-        driver.implicitly_wait(5)
     elif browser_name == "firefox":
         driver = webdriver.Firefox(service=service_obj)
-        driver.implicitly_wait(5)
+    elif browser_name == "edge":
+        driver = webdriver.Edge(service=service_obj)
 
+    driver.implicitly_wait(8)
+    driver.get("https://rahulshettyacademy.com/loginpagePractise")
     #Executing before test function execution
     yield driver
     #Executiong post your test function execution
