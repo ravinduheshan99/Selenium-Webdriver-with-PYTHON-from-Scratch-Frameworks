@@ -9,6 +9,9 @@ from pathlib import Path
 #To run ---> pytest tests/test_e2eTestFramework.py --browser_name firefox
 #To run smoke ---> pytest -m smoke
 #To parallel execution ---> pytest -n 2
+#To generate html reports ---> pytest --html reports/report.html
+#Full complete execution 01 ---> pytest -n 2 -m smoke --browser_name firefox --html=reports/report.html
+#Full complete execution 02 ---> pytest -m smoke --browser_name firefox --html=reports/report.html
 
 
 test_data_path = Path(__file__).parent.parent / "data" / "e2eFrameworkData.json"
